@@ -54,7 +54,7 @@ public class Bataille {
      *
      * @since 07/02/2023
      *
-     * @param args
+     * @param args Arguments par défaut de la fonction main
      */
     public static void main(String[] args) {
         // Initialisation des 2 grilles
@@ -70,13 +70,13 @@ public class Bataille {
 
             // Vérification que l'ordinateur a gagné
             if(vainqueur(grilleJeu)) {
-                System.out.println("");
+                System.out.println();
                 System.out.println("Victoire de l'ordinateur !");
-                System.out.println("");
+                System.out.println();
                 break;
             }
 
-            System.out.println("");
+            System.out.println();
             AfficherGrille(grilleJeu);
             // Tour du joueur
             position = demandePosition();
@@ -84,9 +84,9 @@ public class Bataille {
 
             // Vérification que le joueur a gagné
             if(vainqueur(grilleOrdi)) {
-                System.out.println("");
+                System.out.println();
                 System.out.println("Victoire du joueur !");
-                System.out.println("");
+                System.out.println();
                 break;
             }
         }
@@ -392,16 +392,16 @@ public class Bataille {
             System.out.print(" " + colonne[i]);
         }
 
-        System.out.println("");
+        System.out.println();
         for (int i = 0; i < grille.length; i++) {
             System.out.print((i+1) + " ");
             for (int j = 0; j < grille[i].length; j++) {
                 System.out.print(grille[i][j] + " ");
             }
 
-            System.out.println("");
+            System.out.println();
         }
 
-        System.out.println("");
+        System.out.println();
     }
 }
