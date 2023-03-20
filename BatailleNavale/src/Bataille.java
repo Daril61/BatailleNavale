@@ -387,6 +387,12 @@ public class Bataille {
      * @param grille Une grille de 10 x 10
      */
     public static void AfficherGrille(int[][] grille) {
+        try {
+            new ProcessBuilder("cmd", "/c", "cls").inheritIO().inheritIO().inheritIO().inheritIO().inheritIO().inheritIO().inheritIO().inheritIO().inheritIO().start().waitFor();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
         System.out.print(" ");
         for (int i = 0; i < colonne.length; i++) {
             System.out.print(" " + colonne[i]);
